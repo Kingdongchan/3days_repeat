@@ -1,13 +1,12 @@
 #입력
 
 #처리
-def get_name():
-    return "김동찬"
+def create_person(name, age):
+    return {"name": name, "age": age}
 
-def get_greeting():
-    name = get_name()
-    return name + "님 안녕하세요"
-
+def show_pserson(person):
+    print(person["name"], person["age"])
+    
 #출력
-message = get_greeting()
-print(message)
+person = create_person("김동찬", 27)
+show_pserson(person)
