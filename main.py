@@ -2,8 +2,9 @@
 #입력
 
 #처리
-def introduce(name, age):
-    print(name, age)
+def show_person(person):
+    print(person["name"], person["age"])
 
 #출력
-introduce("김동찬", 27)
+data = {"name": "김동찬", "age": 28}
+show_person(data)
