@@ -2,8 +2,8 @@
 #입력
 
 #처리
-def greet():
-    print("안녕하세요")
+def introduce(name, age):
+    print(name, age)
 
 #출력
-greet()
+introduce("김동찬", 27)
