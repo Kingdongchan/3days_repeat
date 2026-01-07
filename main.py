@@ -1,15 +1,18 @@
 #입력
-idx = int(input())
+keyword = input()
 
 #처리
-member = [
+members = [
     {"name": "김동찬", "age": 27},
     {"name": "공욱재", "age": 26}
 ]
 
-def read_by_index(member, idx):
-    return member[idx]
+def read_by_name(members, keyword):
+    for member in members:
+        if member["name"] == keyword:
+            return member
+    return None
 
 #출력
-result = read_by_index(member, idx)
+result = read_by_name(members, keyword)
 print(result)
