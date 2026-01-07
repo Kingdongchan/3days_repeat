@@ -1,5 +1,5 @@
 #입력
-idx = int(input())
+target_name = input()
 
 #처리
 members = [
@@ -8,9 +8,12 @@ members = [
     {"name": "정승훈", "age": 25}
 ]
 
-def delete_by_index(members, idx):
-    members.pop(idx)
-    
+def delete_by_name (members, target_name):
+    for i, member in enumerate(members):
+        if member["name"] == target_name:
+            members.pop(i)
+            break
+
 #출력
-delete_by_index(members, idx)
+delete_by_name(members, target_name)
 print(members)
