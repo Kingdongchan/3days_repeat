@@ -1,10 +1,14 @@
-#1 
 #입력
 
 #처리
-def show_person(person):
-    print(person["name"], person["age"])
+members = [
+    {"name": "김동찬", "age": 27},
+    {"name": "공우갲", "age": 26}
+]
+
+def read_all(members):
+    for member in members:
+        print(member)
 
 #출력
-data = {"name": "김동찬", "age": 28}
-show_person(data)
+read_all(members)
