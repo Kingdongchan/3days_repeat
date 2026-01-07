@@ -1,12 +1,19 @@
 #입력
+idx = int(input())
 
 #처리
-def create_person(name, age):
-    return {"name": name, "age": age}
+members = [
+    {"name": "김동찬", "age": 27},
+    {"name": "공욱재", "age": 26}   
+]
 
-def show_pserson(person):
-    print(person["name"], person["age"])
-    
+def is_valid_index(members, idx):
+    if idx >= 0 and idx < len(members):
+        return True
+    return False
+
 #출력
-person = create_person("김동찬", 27)
-show_pserson(person)
+if is_valid_index(members, idx):
+    print(members[idx])
+else:
+    print("잘못된 인덱스")
