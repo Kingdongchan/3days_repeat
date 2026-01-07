@@ -1,5 +1,6 @@
 #입력
-keyword = input()
+idx = int(input())
+new_age = input()
 
 #처리
 members = [
@@ -7,12 +8,9 @@ members = [
     {"name": "공욱재", "age": 26}
 ]
 
-def read_by_name(members, keyword):
-    for member in members:
-        if member["name"] == keyword:
-            return member
-    return None
+def update_by_index(members, idx, new_age):
+    members[idx]["age"] = new_age
 
 #출력
-result = read_by_name(members, keyword)
-print(result)
+update_by_index(members, idx, new_age)
+print(members)
