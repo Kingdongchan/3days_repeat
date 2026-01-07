@@ -1,5 +1,5 @@
 #입력
-target_name = input()
+min_age = int(input())
 
 #처리
 members = [
@@ -8,12 +8,12 @@ members = [
     {"name": "정승훈", "age": 25}
 ]
 
-def delete_by_name (members, target_name):
-    for i, member in enumerate(members):
-        if member["name"] == target_name:
-            members.pop(i)
-            break
-
+def search_by_age(members, min_age):
+    result = []
+    for member in members:
+        if member["age"]==min_age:
+            result.append(member)
+            
 #출력
-delete_by_name(members, target_name)
+filtered = search_by_age(members, min_age)
 print(members)
