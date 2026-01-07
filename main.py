@@ -1,19 +1,23 @@
 #입력
-idx = int(input())
-
+def show_menu():
+    print("1. 조회")
+    print("2. 종료")
+    
+def read_all(members):
+    for member in members:
+        print(member)
+        
 #처리
-members = [
-    {"name": "김동찬", "age": 27},
-    {"name": "공욱재", "age": 26}   
-]
-
-def is_valid_index(members, idx):
-    if idx >= 0 and idx < len(members):
-        return True
-    return False
-
+def main():
+    members = [
+        {"name": "김동찬", "age": 27}
+    ]
+    while True:
+        show_menu()
+        menu = input()
+        if menu == "1":
+            read_all(members)
+        elif menu == "2":
+            break
 #출력
-if is_valid_index(members, idx):
-    print(members[idx])
-else:
-    print("잘못된 인덱스")
+main()
