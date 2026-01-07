@@ -1,22 +1,13 @@
 #입력
-def show_menu():
-    print("1. 조회")
-    print("2. 종료")
-    
-def read_all(members):
-    for member in members:
-        print(member)
-        
-#처리
-members = [
-    {"name": "김동찬", "age": 27}
-]
 
-while True:
-    show_menu()
-    menu = input()
-    if menu =="1":
-        read_all(members)
-    elif menu == "2":
-        break
-        
+#처리
+def get_name():
+    return "김동찬"
+
+def get_greeting():
+    name = get_name()
+    return name + "님 안녕하세요"
+
+#출력
+message = get_greeting()
+print(message)
