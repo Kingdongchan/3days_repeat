@@ -1,12 +1,20 @@
 #입력
-def get_person_input():
-    name = input()
-    age = int(input())
-    return {"name": name, "age": age}
+menu = input()
 
 #처리
+members = [
+    {"name": "김동찬", "age": 27}
+]
+
+def read_all(members):
+    for member in members:
+        print(member)
+        
+def get_count(members):
+    return len(members)
 
 #출력
-person = get_person_input()
-print(person)
-
+if menu == "1":
+    read_all(members)
+elif menu == "2":
+    print(get_count(members))
