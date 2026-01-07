@@ -1,10 +1,12 @@
 #입력
+def get_person_input():
+    name = input()
+    age = int(input())
+    return {"name": name, "age": age}
 
 #처리
-def show_menu():
-    print("1. 추가")
-    print("2. 조회")
-    print("3. 종료")
-    
+
 #출력
-show_menu()
+person = get_person_input()
+print(person)
+
